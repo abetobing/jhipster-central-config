@@ -1,0 +1,27 @@
+zuul:
+  host:
+    connect-timeout-millis: 15000
+    socket-timeout-millis: 60000
+    max-per-route-connections: 100
+    max-total-connections: 500
+  semaphore:
+    max-semaphores: 200
+  ribbon:
+    eager-load:
+      enabled: true
+hystrix:
+  command:
+    default:
+      # circuitBreaker:
+      #   enabled: false
+      execution:
+        timeout:
+          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 122000
+ribbon:
+  eager-load:
+    enabled: true
+  ReadTimeout: 60000
+  ConnectTimeout: 30000
