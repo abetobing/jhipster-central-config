@@ -1,71 +1,15 @@
-spring:
-  cloud:
-    circuitbreaker:
-      hystrix:
-        enabled: false
-    loadbalancer:
-      ribbon:
-        enabled: false
-    config:
-      # fail-fast: false
-      request-read-timeout: 60000
-      request-connect-timeout: 60000
-
-zuul:
-  host:
-    connect-timeout-millis: 35000
-    socket-timeout-millis: 60000
-    max-per-route-connections: 100
-    max-total-connections: 500
-  semaphore:
-    max-semaphores: 100000
-  # ribbon:
-  #   eager-load:
-  #     enabled: false
-  # ribbon-isolation-strategy: SEMAPHORE
-# hystrix:
-#   metrics:
-#     enabled: false
-#     # polling-interval-ms: 
-#   command:
-#     default:
-#       circuitBreaker:
-#         enabled: false
-#         # errorThresholdPercentage: 50
-#       fallback:
-#         enabled: true
-#       execution:
-#         timeout:
-#           enabled: true
-#         isolation:
-#           # strategy: SEMAPHORE
-#           thread:
-#             timeoutInMilliseconds: 132000
-#           semaphore:
-#             maxConcurrentRequests: 100
+# FORMULA for hystrix timeout
+# (ribbon.ConnectTimeout + ribbon.ReadTimeout) * (ribbon.MaxAutoRetries + 1) * 
+# (ribbon.MaxAutoRetriesNextServer + 1)
+ribbon:
+  ReadTimeout: 60000
+  ConnectTimeout: 5000
+  MaxAutoRetries: 1
+  MaxAutoRetriesNextServer: 1
 hystrix:
   command:
     default:
       execution:
         isolation:
-          strategy: SEMAPHORE
-          semaphore:
-            maxConcurrentRequests: 100000
-      timeout:
-        enabled: false 
-      circuitBreaker:
-        enabled: false
-      fallback:
-        enabled: false
-ribbon:
-  eager-load:
-    enabled: false
-  ReadTimeout: 60000
-  ConnectTimeout: 3000
-  SocketTimeout: 10000
-
-logging:
-  level:
-    org.springframework.cloud.netflix.zuul: DEBUG
-    org.springframework.cloud.netflix.hystrix: DEBUG
-    org.springframework.cloud.netflix.ribbon: DEBUG
+          thread:
+            timeoutInMilliseconds: 260000
