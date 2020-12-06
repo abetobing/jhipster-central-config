@@ -31,4 +31,13 @@ eureka:
   instance:
     prefer-ip-address: true
 
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 260000
+      circuitBreaker:
+        forceOpen: true
 
