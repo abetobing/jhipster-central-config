@@ -21,7 +21,7 @@ zuul:
     max-semaphores: 200
   ribbon:
     eager-load:
-      enabled: true
+      enabled: false
   ribbon-isolation-strategy: SEMAPHORE
 hystrix:
   metrics:
