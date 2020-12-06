@@ -32,6 +32,6 @@ eureka:
     prefer-ip-address: true
   client:
     eureka-server-connect-timeout-seconds: 15
-    eureka-server-read-timeout-seconds: 15
+    eureka-server-read-timeout-seconds: 60
 
 
