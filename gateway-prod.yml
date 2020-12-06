@@ -18,31 +18,45 @@ zuul:
     max-per-route-connections: 100
     max-total-connections: 500
   semaphore:
-    max-semaphores: 200
-  ribbon:
-    eager-load:
-      enabled: false
+    max-semaphores: 100000
+  # ribbon:
+  #   eager-load:
+  #     enabled: false
   # ribbon-isolation-strategy: SEMAPHORE
+# hystrix:
+#   metrics:
+#     enabled: false
+#     # polling-interval-ms: 
+#   command:
+#     default:
+#       circuitBreaker:
+#         enabled: false
+#         # errorThresholdPercentage: 50
+#       fallback:
+#         enabled: true
+#       execution:
+#         timeout:
+#           enabled: true
+#         isolation:
+#           # strategy: SEMAPHORE
+#           thread:
+#             timeoutInMilliseconds: 132000
+#           semaphore:
+#             maxConcurrentRequests: 100
 hystrix:
-  metrics:
-    enabled: false
-    # polling-interval-ms: 
   command:
     default:
+      execution:
+        isolation:
+          strategy: SEMAPHORE
+          semaphore:
+            maxConcurrentRequests: 100000
+      timeout:
+        enabled: false 
       circuitBreaker:
         enabled: false
-        # errorThresholdPercentage: 50
       fallback:
-        enabled: true
-      execution:
-        timeout:
-          enabled: true
-        isolation:
-          # strategy: SEMAPHORE
-          thread:
-            timeoutInMilliseconds: 132000
-          semaphore:
-            maxConcurrentRequests: 100
+        enabled: false
 ribbon:
   eager-load:
     enabled: false
