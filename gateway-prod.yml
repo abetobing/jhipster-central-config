@@ -22,7 +22,7 @@ zuul:
   ribbon:
     eager-load:
       enabled: false
-  ribbon-isolation-strategy: SEMAPHORE
+  # ribbon-isolation-strategy: SEMAPHORE
 hystrix:
   metrics:
     enabled: false
@@ -38,7 +38,7 @@ hystrix:
         timeout:
           enabled: true
         isolation:
-          strategy: SEMAPHORE
+          # strategy: SEMAPHORE
           thread:
             timeoutInMilliseconds: 120000
           semaphore:
