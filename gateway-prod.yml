@@ -30,7 +30,7 @@ hystrix:
   command:
     default:
       circuitBreaker:
-        enabled: true
+        enabled: false
         # errorThresholdPercentage: 50
       fallback:
         enabled: false
