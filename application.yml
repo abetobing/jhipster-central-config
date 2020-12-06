@@ -26,8 +26,8 @@ logging:
   file: ${spring.application.name}.log
 
 eureka:
-  # server:
-  #   peer-node-read-timeout-ms: 35000
+  server:
+    peer-node-read-timeout-ms: 60000
   instance:
     prefer-ip-address: true
 
