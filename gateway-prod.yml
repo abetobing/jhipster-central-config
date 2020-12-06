@@ -52,5 +52,6 @@ ribbon:
 
 logging:
   level:
+    org.springframework.cloud.netflix.zuul: DEBUG
     org.springframework.cloud.netflix.hystrix: DEBUG
     org.springframework.cloud.netflix.ribbon: DEBUG
