@@ -33,10 +33,10 @@ hystrix:
         enabled: false
         # errorThresholdPercentage: 50
       fallback:
-        enabled: false
+        enabled: true
       execution:
         timeout:
-          enabled: false
+          enabled: true
         isolation:
           strategy: SEMAPHORE
           thread:
