@@ -44,5 +44,5 @@ hystrix:
           thread:
             timeoutInMilliseconds: 260000
       circuitBreaker:
-        forceOpen: true
+        forceClosed: true
 
