@@ -24,6 +24,11 @@ jhipster:
 logging:
   path: /tmp
   file: ${spring.application.name}.log
+  level:
+    ROOT: INFO
+    io.github.jhipster: INFO
+    com.sedigit.edu.gateway: INFO
+
 
 eureka:
   server:
