@@ -42,10 +42,10 @@ ribbon:
 hystrix:
   command:
     default:
-      # execution:
-      #   isolation:
-      #     thread:
-      #       timeoutInMilliseconds: 260000
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 260000
       circuitBreaker:
         forceClosed: true
 zuul:
