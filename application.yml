@@ -30,13 +30,6 @@ logging:
     com.sedigit.edu.gateway: INFO
 
 
-eureka:
-  client:
-    service-url:
-      defaultZone: http://admin:admin@jhipster-registry:8761/eureka/
-  instance:
-    prefer-ip-address: true
-
 ribbon:
   ReadTimeout: 60000
   ConnectTimeout: 30000
