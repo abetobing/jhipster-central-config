@@ -1,12 +1,12 @@
 # FORMULA for hystrix timeout
 # (ribbon.ConnectTimeout + ribbon.ReadTimeout) * (ribbon.MaxAutoRetries + 1) * 
 # (ribbon.MaxAutoRetriesNextServer + 1)
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 5000
-  MaxAutoRetries: 1
-  MaxAutoRetriesNextServer: 1
-  ServerListRefreshInterval: 5000
+# ribbon:
+#   ReadTimeout: 60000
+#   ConnectTimeout: 5000
+#   MaxAutoRetries: 1
+#   MaxAutoRetriesNextServer: 1
+#   ServerListRefreshInterval: 5000
 # hystrix:
 #   command:
 #     default:
