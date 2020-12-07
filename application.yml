@@ -34,8 +34,6 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:admin@jhipster-registry:8761/eureka/
-  server:
-    peer-node-read-timeout-ms: 60000
   instance:
     prefer-ip-address: true
 
