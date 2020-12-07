@@ -1,4 +1,6 @@
 eureka:
+  client:
+    enabled: false
   server:
     # see discussion about enable-self-preservation:
     # https://github.com/jhipster/generator-jhipster/issues/3654
