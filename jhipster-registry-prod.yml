@@ -1,9 +1,9 @@
 eureka:
-  instance:
-    prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://admin:${spring.security.user.password}@127.0.0.1:8761/eureka/    
+  # instance:
+  #   prefer-ip-address: true
+  # client:
+  #   service-url:
+  #     defaultZone: http://admin:${spring.security.user.password}@127.0.0.1:8761/eureka/    
   server:
     # see discussion about enable-self-preservation:
     # https://github.com/jhipster/generator-jhipster/issues/3654
