@@ -46,11 +46,11 @@ hystrix:
       execution:
         isolation:
           thread:
-            timeoutInMilliseconds: 260000
+            timeoutInMilliseconds: 180000
       circuitBreaker:
-        forceClosed: true
+        forceClosed: false
 zuul:
   host:
-    connect-timeout-millis: 30000
+    connect-timeout-millis: 60000
     max-per-route-connections: 100
     max-total-connections: 1000
