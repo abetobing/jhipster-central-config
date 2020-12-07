@@ -1,0 +1,4 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:admin@0.0.0.0:8761/eureka/
