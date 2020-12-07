@@ -29,21 +29,3 @@ logging:
     io.github.jhipster: INFO
     com.sedigit.edu.gateway: INFO
 
-
-ribbon:
-  ReadTimeout: 60000
-  ConnectTimeout: 30000
-hystrix:
-  command:
-    default:
-      execution:
-        isolation:
-          thread:
-            timeoutInMilliseconds: 180000
-      circuitBreaker:
-        forceClosed: false
-zuul:
-  host:
-    connect-timeout-millis: 60000
-    max-per-route-connections: 100
-    max-total-connections: 1000
