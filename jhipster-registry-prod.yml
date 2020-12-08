@@ -1,16 +1,16 @@
-eureka:
-  # instance:
-  #   prefer-ip-address: true
-  # client:
-  #   service-url:
-  #     defaultZone: http://admin:${spring.security.user.password}@127.0.0.1:8761/eureka/    
-  server:
-    # see discussion about enable-self-preservation:
-    # https://github.com/jhipster/generator-jhipster/issues/3654
-    peer-node-read-timeout-ms: 60000
-    # enable-self-preservation: false
-    # registry-sync-retry-wait-ms: 500
-    # a-sgcache-expiry-timeout-ms: 60000
-    # eviction-interval-timer-in-ms: 10000
-    # peer-eureka-nodes-update-interval-ms: 30000
-    # renewal-threshold-update-interval-ms: 30000
+# eureka:
+#   # instance:
+#   #   prefer-ip-address: true
+#   # client:
+#   #   service-url:
+#   #     defaultZone: http://admin:${spring.security.user.password}@127.0.0.1:8761/eureka/    
+#   server:
+#     # see discussion about enable-self-preservation:
+#     # https://github.com/jhipster/generator-jhipster/issues/3654
+#     peer-node-read-timeout-ms: 60000
+#     # enable-self-preservation: false
+#     # registry-sync-retry-wait-ms: 500
+#     # a-sgcache-expiry-timeout-ms: 60000
+#     # eviction-interval-timer-in-ms: 10000
+#     # peer-eureka-nodes-update-interval-ms: 30000
+#     # renewal-threshold-update-interval-ms: 30000
